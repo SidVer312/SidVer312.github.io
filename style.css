@@ -1,0 +1,130 @@
+body{
+    background-image: url(assets/wp_upscaled.jpg);
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+    font-family: monospace;
+}
+
+.window{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: calc(50% - 90px);
+    left: calc(50% - 180px);
+    transform: (-50%, -50%);
+    border: solid; 
+    text-wrap: wrap;
+    width: fit-content; 
+    backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.125);
+    border-radius: 10px;
+    padding: 6px;
+}
+
+.nav{
+    position: absolute;
+    width: 98.5%;
+    top: 0.1;
+    backdrop-filter: blur(10px); 
+    background-color: rgba(0, 0, 0, 0.35);
+    border-radius: 24px;
+    gap: 32px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.topbar-title{
+    cursor: pointer;
+    margin-left: 10px;
+    background-color: rgba(256, 256, 256, 0.15); 
+    padding: 4px 12px; 
+    border-radius: 16px;
+    font-weight: 700;
+}
+
+.grav{
+    margin-left: 16px;
+    color: #fff; 
+    background-color: rgba(256, 256, 256, 0.15); 
+    padding: 4px 12px; 
+    border-radius: 16px;
+}
+
+.topbar-time{
+    margin-right: 16px; 
+    background-color: rgba(256, 256, 256, 0.125); 
+    padding: 4px 12px; 
+    border-radius: 16px;
+}
+
+.windowheader{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    cursor: move;
+    justify-content: space-between;
+    margin-top: 4px;
+}
+
+.windowcontent{
+    background-color: #fff;
+    margin: 6px;
+    border-radius: 12px;
+    padding: 12px;
+    width: 420px;
+}
+
+.windowclose{
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    border-radius: 16px;
+    margin-right: 4px;
+    color: #fff;
+    padding: 6px;
+    border: solid 1px rgba(0, 0, 0, 0.25);
+    background-color: red;
+
+}
+
+.windowclose p{
+    margin-top: 0px;
+    margin-left: 3px;
+}
+
+a{
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+
+.gravcontainer{
+    margin-top: 15px;
+}
+
+.desktopApps{
+    padding-top: 72px;
+    padding-left: 91vw;
+    padding-right: 16px;
+}
+
+.desktopApps p{
+    margin: 0px;
+    color: #fff;
+}
+
+.desktopApps img{
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+}
+
+.selected p{
+    background-color: rgba(256, 256, 256, 0.5);
+    border-radius: 12px;
+    padding: 2px;
+}
