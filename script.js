@@ -145,3 +145,47 @@ function initializeWindow(elementName){
   dragElement(screen)
 }
 
+
+var content = [
+  {
+    title: "About Me",
+    date: "2024-05-26",
+    content: `
+      <p style="font-weight: bold; font-family: monospace;">Welcome to my life</p>
+      <img src="assets/Siddhartha_Verma.jpeg"  style="width: 128px; height: 128px; object-fit: cover;">
+      <p style="font-weight: 400; font-family: monospace; font-size: 13px;">Hello/ciao/Servus!
+
+          My name is Siddhartha Verma. I am an Alumnus of DPS RK Puram batch of '24 and the former Chief Advisor at Exun Clan, the technology club of my school. </p>
+      <p style="font-weight: 400; font-family: monospace; font-size: 13px;"> I am a student, programmer, quizzer, Computer Hardware and Robotics enthusiast by day, and a massive Motorsport (primarily Formula 1 and WEC) fan and car guy by night, with my interest in cars also leading me to dip my toes into Aerodynamics.
+          My love for technology and cars fuels my attempt to understand what's behind some of the fastest machines on the planet, computers and cars alike.</p>
+    `
+  }
+]
+
+
+function setNotesContent(index){
+  var notesContent = document.querySelector("#notescontent")
+  notesContent.innerHTML = content[index].content
+
+}
+
+setNotesContent(0)
+
+
+function addToSidebar(index){
+  var sidebar = document.querySelector("#sidebar")
+  var note = content[index]
+  var newDiv = document.createElement("div")
+  newDiv.innerHTML = `
+    <div class="note" onclick="setNotesContent(${index})">
+      <p style="font-weight: bold; font-family: monospace; font-size: 13px; margin-bottom: 0px;">${note.title}</p>
+      <p style="font-weight: 400; font-family: monospace; font-size: 13px; margin-top: 0px;">${note.date}</p>
+    </div>
+  `
+  newDiv.addEventListener("click", () => setNotesContent(index))
+  sidebar.appendChild(newDiv)
+}
+
+for (var i = 0; i < content.length; i++){
+  addToSidebar(i)
+}

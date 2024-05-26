@@ -19,7 +19,7 @@
         <div class="desktopApps" id="desktopApps">
             <div id="icon" style="text-align: center; padding: 16px; filter: drop-shadow(0 0 3px black); width: fit-content;">
                 <img src="assets/diary.png" alt="">
-                <p style="margin: 0px; color: #fff;">About Me</p>
+                <p style="margin: 0px; color: #fff;">Notes</p>
             </div>
         </div>
         <div class="window" id="window">
@@ -34,12 +34,17 @@
                 <img style="width: 64px; height: 64px; border-radius: 64px; object-fit: cover;" src="assets/pfp.jpg" />
                 <h1 style="margin: 4px;">GravGenOS (Web Edition)</h1>
                 <p>Welcome to GravGenOS! A glorious feature limited look into answering - What makes Siddhartha Verma's genius generate gravity? </p>
+                <p>Head over to the notes app learn more about me! (and if I have started it yet then you might also see my blog there)
+                </br>
+                </br>Interested in my projects? Head over to the settings app!
+                </p>
+                <p>OSes not your thing? Click the middle button on the navbar to go the regular looking website.</p>
             </div>
         </div>
         <div class="window" id="notes" style="display: none;">
             <div class="windowheader" id="windowheader">
                 <div style="width: 16px; margin-left: 6px; height: 16px;"></div>
-                <p style="margin: 0px; color: #fff; font-weight: 500;">About Me</p>
+                <p style="margin: 0px; color: #fff; font-weight: 500;">Notes</p>
                 <div class="windowclose" id="notesclose">
                     <p>X</p>
                 </div>
@@ -50,17 +55,10 @@
             padding: 12px;
             width: 520px;">
                 <div class="contentrow" style="display: flex; flex-direction: row;">
-                    <div class="sidebar" style="background-color: #F9F9F9; width: 520px; margin-right: 16px; padding: 16px; border-radius: 16px;">
-                        <p style="font-family: monospace; font-weight: bold; font-size: 13px;">About Me</p>
+                    <div class="sidebar" id="sidebar" style="background-color: #F9F9F9; width: 520px; margin-right: 16px; padding: 16px; border-radius: 16px;">
                     </div>
-                    <div class="main">
-                        <p style="font-weight: bold; font-family: monospace;">Welcome to my life</p>
-                        <img src="assets/Siddhartha_Verma.jpeg"  style="width: 128px; height: 128px; object-fit: cover;">
-                        <p style="font-weight: 400; font-family: monospace; font-size: 13px;">Hello/ciao/Servus!
-
-                            My name is Siddhartha Verma. I am an Alumnus of DPS RK Puram batch of '24 and the former Chief Advisor at Exun Clan, the technology club of my school. </p>
-                        <p style="font-weight: 400; font-family: monospace;"> I am a student, programmer, quizzer, Computer Hardware and Robotics enthusiast by day, and a massive Motorsport (primarily Formula 1 and WEC) fan and car guy by night, with my interest in cars also leading me to dip my toes into Aerodynamics.
-                            My love for technology and cars fuels my attempt to understand what's behind some of the fastest machines on the planet.</p>
+                    <div class="main" id="notescontent"style="overflow-y: scroll;">
+                        
                     </div>
                 </div>
             </div>
