@@ -93,7 +93,7 @@ function deselectIcon(element) {
   selectedIcon = undefined
 }
 
-function handleIconTap(element) {
+function handleNotesIconTap(element) {
   if (element.classList.contains("selected")) {
     deselectIcon(element)
     openWindow(document.querySelector("#notes"))
@@ -105,7 +105,24 @@ function handleIconTap(element) {
 
 var icon = document.querySelector("#icon")
 icon.addEventListener("click", () => 
-  handleIconTap(icon)
+  handleNotesIconTap(icon)
+
+  
+)
+
+function handleFilesIconTap(element) {
+  if (element.classList.contains("selected")) {
+    deselectIcon(element)
+    openWindow(document.querySelector("#files"))
+  }
+  else{
+    selectIcon(element)
+  }
+}
+
+var filesicon = document.querySelector("#filesicon")
+filesicon.addEventListener("click", () => 
+  handleFilesIconTap(filesicon)
 
   
 )
@@ -135,6 +152,8 @@ function addWindowTapHandling(element) {
 
 addWindowTapHandling(welcomeScreen)
 addWindowTapHandling(notesScreen)
+addWindowTapHandling(document.querySelector("#files"))
+dragElement(document.querySelector("#files"))
 
 
 function initializeWindow(elementName){
@@ -189,3 +208,10 @@ function addToSidebar(index){
 for (var i = 0; i < content.length; i++){
   addToSidebar(i)
 }
+
+var files = document.querySelector("#files")
+var filesScreenClose = document.querySelector("#filesclose")
+filesScreenClose.addEventListener("click", () => closeWindow(files))
+
+
+initializeWindow(files)
