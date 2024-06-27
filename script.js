@@ -134,6 +134,20 @@ var notesScreenClose = document.querySelector("#notesclose")
 
 notesScreenClose.addEventListener("click", () => closeWindow(notesScreen))
 
+function handleResIconTap(element) {
+  if (element.classList.contains("selected")) {
+    deselectIcon(element)
+    window.open("https://drive.google.com/file/d/1TCJLj7G0uw2FFEaifUGjg6GmL1ClglHN/view", "_blank")
+  }
+  else{
+    selectIcon(element)
+  }
+}
+
+var resIcon = document.querySelector("#resumeicon")
+resIcon.addEventListener("click", () => 
+  handleResIconTap(resIcon)
+)
 
 
 function handleWindowTap(element) {
@@ -212,6 +226,7 @@ for (var i = 0; i < content.length; i++){
 var files = document.querySelector("#files")
 var filesScreenClose = document.querySelector("#filesclose")
 filesScreenClose.addEventListener("click", () => closeWindow(files))
+
 
 
 initializeWindow(files)
