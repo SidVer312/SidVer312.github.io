@@ -137,7 +137,7 @@ notesScreenClose.addEventListener("click", () => closeWindow(notesScreen))
 function handleResIconTap(element) {
   if (element.classList.contains("selected")) {
     deselectIcon(element)
-    window.open("https://drive.google.com/file/d/1TCJLj7G0uw2FFEaifUGjg6GmL1ClglHN/view", "_blank")
+    window.open("https://drive.google.com/file/d/19jNXLhhkcEZahphQJo9_UcQFk3Kz0ctI/view?usp=drive_link", "_blank")
   }
   else{
     selectIcon(element)
@@ -188,7 +188,7 @@ var content = [
       <img src="assets/Siddhartha_Verma.jpeg"  style="width: 128px; height: 128px; object-fit: cover;">
       <p style="font-weight: 400; font-family: monospace; font-size: 13px;">Hello/ciao/Servus!
 
-          My name is Siddhartha Verma. I am an Alumnus of DPS RK Puram batch of '24 and the former Chief Advisor at Exun Clan, the technology club of my school. </p>
+          My name is Siddhartha Verma. I am a freshman at VIT Vellore, an Alumnus of DPS RK Puram, the former Chief Advisor at Exun Clan, the technology club of my school and the co-Founder of Tarmac Media. </p>
       <p style="font-weight: 400; font-family: monospace; font-size: 13px;"> I am a student, programmer, quizzer, Computer Hardware and Robotics enthusiast by day, and a massive Motorsport (primarily Formula 1 and WEC) fan and car guy by night, with my interest in cars also leading me to dip my toes into Aerodynamics.
           My love for technology and cars fuels my attempt to understand what's behind some of the fastest machines on the planet, computers and cars alike.</p>
     `
