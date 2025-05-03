@@ -137,7 +137,7 @@ notesScreenClose.addEventListener("click", () => closeWindow(notesScreen))
 function handleResIconTap(element) {
   if (element.classList.contains("selected")) {
     deselectIcon(element)
-    window.open("https://drive.google.com/file/d/19jNXLhhkcEZahphQJo9_UcQFk3Kz0ctI/view?usp=drive_link", "_blank")
+    window.open("https://drive.google.com/file/d/1vsMdR2XMUfRI4H9YSPPg2WQJPDu1n8r1/view?usp=sharing", "_blank")
   }
   else{
     selectIcon(element)
